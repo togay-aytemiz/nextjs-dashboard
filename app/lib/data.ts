@@ -1,3 +1,4 @@
+
 import { sql } from '@vercel/postgres';
 import {
   CustomerField,
@@ -22,6 +23,7 @@ export async function fetchRevenue() {
     // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
+    console.log(data);
 
     // console.log('Data fetch completed after 3 seconds.');
 
